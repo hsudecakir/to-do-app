@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/to-do-app.js" defer></script>
+  <title>To do App</title>
+</head>
+<body>
+  <div class="container">
+    <div class="container-fluid">
+      <div class="header">
+        <img src="assets/images/logo.svg" alt="Logo">
+        <img id="switchModeBtn" src="assets/images/dark-mode-btn.svg" alt="Switch Mode Button">
+      </div>
+      <div class="add-todo">
+        <input id="addTodoInput" type="text" placeholder="Create a new todo…">
+        <span id="addTodoBtn"></span>
+      </div>
+      <div class="todos">
+        <ul id="todoList">
+          <li>
+            <div class="todo-list__wrapper completed-todo-text">
+              <label class="checkbox-container">
+                <input type="checkbox" class="not-completed-todos completed-todos" checked>
+                <span class="checkmark"></span>
+              </label>
+              <p>Complete online JavaScript course</p>
+            </div>
+            <img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button">
+          </li>
+          <li>
+            <div class="todo-list__wrapper">
+              <label class="checkbox-container">
+                <input type="checkbox" class="not-completed-todos">
+                <span class="checkmark"></span>
+              </label>
+              <p>Jog around the park 3x</p>
+            </div>
+            <img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button">
+          </li>
+          <li>
+            <div class="todo-list__wrapper">
+              <label class="checkbox-container">
+                <input type="checkbox" class="not-completed-todos">
+                <span class="checkmark"></span>
+              </label>
+              <p>10 minutes meditation</p>
+            </div>
+            <img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button">
+          </li>
+          <li>
+            <div class="todo-list__wrapper">
+              <label class="checkbox-container">
+                <input type="checkbox" class="not-completed-todos">
+                <span class="checkmark"></span>
+              </label>
+              <p>Read for 1 hour</p>
+            </div>
+            <img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button">
+          </li>
+          <li>
+            <div class="todo-list__wrapper">
+              <label class="checkbox-container" for="checkbox">
+                <input type="checkbox" class="not-completed-todos">
+                <span class="checkmark"></span>
+              </label>
+              <p>Pick up groceries</p>
+            </div>
+            <img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button">
+          </li>
+          <li>
+            <div class="todo-list__wrapper">
+              <label class="checkbox-container">
+                <input type="checkbox" class="not-completed-todos">
+                <span class="checkmark"></span>
+              </label>
+              <p>Complete Todo App on Frontend Mentor</p>
+            </div>
+            <img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button">
+          </li>
+          <li class="last-one" id="lastOne">
+            <div class="todo-list__wrapper">
+              <p><span id="leftTodos">5</span> items left</p>
+            </div>
+            <div class="todo-type-select todo-type-select--desktop">
+              <p class="todo-type selected-todo" id="allTodosBtnDesktop">All</p>
+              <p class="todo-type" id="activeTodosBtnDesktop">Active</p>
+              <p class="todo-type" id="completedTodosBtnDesktop">Completed</p>
+            </div>
+            <p id="clearCompletedTodosBtn">Clear Completed</p>
+          </li>
+        </ul>
+      </div>
+      <div class="todo-type-select">
+        <p class="todo-type selected-todo" id="allTodosBtn">All</p>
+        <p class="todo-type" id="activeTodosBtn">Active</p>
+        <p class="todo-type" id="completedTodosBtn">Completed</p>
+      </div>
+      <p class="drag-drop">Drag and drop to reorder list</p>
+    </div>
+  </div>
+</body>
+</html>
