@@ -1,3 +1,6 @@
+let activeTodos = [];
+let completedTodos = [];
+
 
 function changeMode(){
   const container = document.querySelector('.container');
@@ -57,8 +60,6 @@ function changeTodo(){
 }
 
 function sperateTodos(){
-  let activeTodos = [];
-  let completedTodos = [];
   const todos = document.querySelectorAll('.todo-list__wrapper');
 
   for(const todo of todos){
