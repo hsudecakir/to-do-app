@@ -25,7 +25,16 @@ function selectTodo(){
 
 function addTodo(){
   if(addTodoInput.value.trim() !== ''){
-    todoList.insertAdjacentHTML('afterbegin', `<li><div class="todo-list__wrapper"><input type="checkbox" class="not-completed-todos"><p class="todo-text">${addTodoInput.value}</p></div><img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button"></li>`);
+    todoList.insertAdjacentHTML('afterbegin', `<li>
+            <div class="todo-list__wrapper">
+              <label class="checkbox-container">
+                <input type="checkbox" class="not-completed-todos">
+                <span class="checkmark"></span>
+              </label>
+              <p>${addTodoInput.value} </p>
+            </div>
+            <img class="delete-todo-btn" src="assets/images/x.svg" alt="Delete Button">
+          </li>`);
     addTodoInput.value = '';
     selectBtn();
     selectTodo();
@@ -47,10 +56,9 @@ function changeTodo(){
   sperateTodos();
 }
 
-let activeTodos = [];
-let completedTodos = [];
-
 function sperateTodos(){
+  let activeTodos = [];
+  let completedTodos = [];
   const todos = document.querySelectorAll('.todo-list__wrapper');
 
   for(const todo of todos){
@@ -140,12 +148,6 @@ function showAllTodos(){
   sperateTodos();
 }
 
-// function loadTodos(){
-//   completedTodos = JSON.parse(localStorage.completedTodos);
-//   activeTodos = JSON.parse(localStorage.activeTodos);
-// }
-
-
 selectTodo();
 selectBtn();
 sperateTodos();
@@ -158,4 +160,3 @@ completedTodosBtn.addEventListener('click', showCompletedTodos);
 completedTodosBtnDesktop.addEventListener('click', showCompletedTodos);
 clearCompletedTodosBtn.addEventListener('click', deleteCompletedTodos);
 addTodoBtn.addEventListener('click', addTodo);
-// loadTodos();
