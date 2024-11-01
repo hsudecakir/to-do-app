@@ -146,7 +146,7 @@ table {
   border: 1px solid var(--border-color-dark);
 }
 
-#addTodoBtn:hover{
+#addTodoBtn:hover, .todo-list__wrapper input:hover{
   width: 20px;
   height: 20px;
   border-radius: 50%;
