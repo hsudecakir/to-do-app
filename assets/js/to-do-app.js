@@ -3,9 +3,8 @@ let completedTodos = [];
 
 
 function changeMode(){
-  const container = document.querySelector('.container');
-  container.classList.toggle('dark-mode');
-  if(container.classList.contains('dark-mode')){
+  document.body.classList.toggle('dark-mode');
+  if(document.body.classList.contains('dark-mode')){
     switchModeBtn.src = 'assets/images/light-mode-btn.svg';
   } else{
     switchModeBtn.src = 'assets/images/dark-mode-btn.svg';

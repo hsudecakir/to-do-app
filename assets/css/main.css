@@ -47,6 +47,9 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background-color: var(--bg-light);
   height: 100%;
+  background-image: url(../images/bg-light.png);
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
 }
 ol, ul {
 	list-style: none;
@@ -72,13 +75,10 @@ table {
 .container{
   padding: 48px 24px 72px;
   width: 100%;
-  background-image: url(../images/bg-light.png);
-  background-size: 100% 200px;
-  background-repeat: no-repeat;
-  background-color: var(--bg-light);
+
 }
 
-.dark-mode{
+body.dark-mode{
   background-image: url(../images/bg-dark.png);
   background-size: 100% 200px;
   background-repeat: no-repeat;
